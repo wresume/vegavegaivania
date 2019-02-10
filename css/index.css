@@ -1,0 +1,33 @@
+:root{
+	--base: #000;
+	--complement: #000;
+	--baseText: #000;
+	--complementText: #000;
+	--transDark: rgba(0,0,0,.5);
+	--transLight: rgba(250,250,250,.5);
+	--boxShadow: rgba(0,0,0,.25);
+}
+::-webkit-scrollbar{
+	width: .4rem;
+	background: var(--base);
+	border-radius: 2rem;
+}
+::-webkit-scrollbar-thumb{
+	background: var(--complement);
+	border-radius: 2rem;
+}
+*,
+*::before,
+*::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+html{
+	overflow: hidden;
+}
