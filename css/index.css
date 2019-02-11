@@ -1,10 +1,10 @@
 :root{
-	--base: #D0DFDF;
-	--complement: rgb(0,175,250);
-	--baseText: #000;
-	--complementText: #000;
+	--base: rgb(240,240,240);
+	--complement: rgb(0,150,150);
+	--baseText: rgb(15,15,15);
+	--complementText: rgb(250,250,250);
 	--transDark: rgba(0,0,0,.5);
-	--transLight: rgba(250,250,250,.5);
+	--transLight: rgba(250,250,250,.25);
 	--transLight: rgba(250,250,250,.25);
 	--boxShadow: rgba(0,0,0,.25);
 }
@@ -37,6 +37,9 @@ html{
 	max-width: 100%;
 	min-height: 100vh;
 	max-height: 100vh;
+	font-family: 'Dosis', sans-serif;
+}
+#interface{
 }
 #Loading-box{
 	width: 70px;
@@ -88,6 +91,7 @@ html{
 .svg-blank-bground{
 	width: 100%;
 	height: 75px;
+	z-index: -1;
 }
 .padding-bground{
 	position: fixed;
@@ -106,4 +110,99 @@ html{
 }
 .triangle-bground:nth-child(even){
 	fill: var(--transLight);
+}
+#section{
+	max-width: 60%;
+	min-height: 100vh;
+	margin: 0 auto;
+	padding: 75px 0;
+	color: var(--baseText);
+	z-index: 99;
+}
+.grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 1em;
+	position: relative;
+}
+.half-grid{
+	max-height: calc(100vh - 150px);
+	padding: 1em;
+	background: var(--transLight);
+	overflow-y: auto;
+	position: relative;
+}
+.blank-for-pp{
+	width: 100%;
+	height: 150px;
+}
+.content{
+	text-align: justify;
+	font-size: 1em;
+}
+#profile-picture{
+	height: 150px;
+	padding: .4em;
+	background: #FFF;
+	border-radius: 50%;
+	border: .4em solid var(--complement);
+	position: absolute;
+	top: 0;
+	left: calc(50% - 75px);
+	cursor: pointer;
+}
+.resume-owner-name{
+	margin-top: .5em;
+	color: var(--baseText);
+	text-align: center;
+	font-family: 'Bree Serif', serif;
+	font-size: 2em;
+}
+.resume-owner-position{
+	text-align: center;
+	font-size: 1em;
+}
+.halfgrid-subtitles{
+	margin-top: .5em;
+	text-align: center;
+	font-family: 'Bree Serif', serif;
+	font-size: 1.7em;
+}
+.contact-list{
+	margin-left: 1.5em;
+}
+.contact-list li{
+	padding: .5em 0;
+}
+.contact-list a{
+	color: var(--baseText);
+	text-decoration: none;
+	cursor: pointer;
+}
+.first-li{
+	list-style-image: url(../media/li-item-1.png);
+	cursor: pointer;
+}
+.second-li{
+	list-style-image: url(../media/li-item-2.png);
+}
+progress{
+	margin-bottom: .5em;
+	transform: translate(0,-.25em);
+	width: 100%;
+	height: 5px;
+}
+.half-grid:nth-child(2) h2{
+	margin: 1.2em 0 .75em;
+	text-align: right;
+	font-size: 1.25em;
+}
+.right-half-titles{
+	border-radius: 2em 0 2em 0;
+	padding: .25em 2em;
+	background: var(--complement);
+	color: var(--complementText);
+}
+hr{
+	margin-bottom: 1em;
 }
