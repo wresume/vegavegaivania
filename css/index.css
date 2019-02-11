@@ -1,7 +1,7 @@
 :root{
 	--base: rgb(240,240,240);
-	--complement: rgb(0,150,150);
-	--complementPlus: rgb(150,225,250);
+	--complement: rgb(166,33,103);
+	--complementPlus: rgb(246,145,203);
 	--baseText: rgb(15,15,15);
 	--complementText: rgb(250,250,250);
 	--complementTextPlus: rgb(0,50,50);
@@ -189,10 +189,15 @@ html{
 	list-style-image: url(../media/li-item-2.png);
 }
 progress{
-	margin-bottom: .5em;
-	transform: translate(0,-.25em);
 	width: 100%;
 	height: 5px;
+	margin-bottom: .5em;
+	transform: translate(0,-.25em);
+	background: var(--base);
+}
+::-webkit-progress-value{
+  background-color: var(--complementPlus);
+  border-radius: 2px;
 }
 .right-grid h2{
 	margin: .75em 0 .75em;
@@ -256,22 +261,36 @@ time{
   visibility: visible;
   opacity: 1;
 }
-#footer{
-	color: var(--transDark);
+#footer,
+#download-link{
+	padding: .5em 1em;
+	background: var(--transLight);
+	color: var(--transLight);
+	border-radius: .25em;
 	position: fixed;
-	top: 0;
-	left: 0;
 	z-index: 999;
 }
-#footer:hover{
+#footer{
+	top: .5em;
+	left: .5em;
+}
+#download-link{
+	right: .5em;
+	bottom: .5em;
+}
+#footer:hover,
+#download-link:hover{
 	color: var(--base);
 }
 #footer p:hover a,
-#footer p a:hover{
+#footer p a:hover,
+#download-link p:hover a,
+#download-link p a:hover{
 	color: var(--base);
 }
-#footer p a{
-	color: var(--transDark);
+#footer p a,
+#download-link p a{
+	color: var(--transLight);
 	cursor: pointer;
 }
 @media all and (max-width: 1280px){
