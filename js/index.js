@@ -1,6 +1,7 @@
 // CAJAS
 	var d, loadingBox,
 		triangleBground, cx1, cy1, cx2, cy2, cx3, cy3;
+
 // ARCHIVO
 	d = document;
 	loadingBox = d.getElementById('Loading-box');
