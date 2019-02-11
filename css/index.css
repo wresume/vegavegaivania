@@ -256,6 +256,24 @@ time{
   visibility: visible;
   opacity: 1;
 }
+#footer{
+	color: var(--transDark);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+#footer:hover{
+	color: var(--base);
+}
+#footer p:hover a,
+#footer p a:hover{
+	color: var(--base);
+}
+#footer p a{
+	color: var(--transDark);
+	cursor: pointer;
+}
 @media all and (max-width: 1280px){
 	#section{
 		max-width: 75%;
