@@ -1,11 +1,14 @@
 // CAJAS
 	var d, loadingBox,
-		triangleBground, cx1, cy1, cx2, cy2, cx3, cy3;
+		triangleBground,
+		cx1, cy1, cx2, cy2, cx3, cy3,
+		section;
 
 // ARCHIVO
 	d = document;
 	loadingBox = d.getElementById('Loading-box');
 	triangleBground = d.getElementsByClassName('triangle-bground');
+	section = d.getElementById('section');
 
 // MÉTODOS
 	function remSpinCircles(delay){
@@ -58,9 +61,20 @@
 		}, 185);
 	};
 
+	function showSection(delay){
+		section.style = 'transform: translate(0,-3rem); opacity: 0;';
+		setTimeout(function(){
+			section.style = 'transform: translate(0,2rem); opacity: 1; transition: .5s;';
+			setTimeout(function(){
+				section.style = 'transform: translate(0,0); transition: .1s;';
+			}, 250);
+		}, delay);
+	};
+
 // EVENTOS
 	remSpinCircles(2300);
 	polygonPts();
+	showSection(2400);
 
 // DEDICADO
 	window.oncontextmenu = function(){
