@@ -1,10 +1,11 @@
 :root{
-	--base: #000;
-	--complement: #000;
+	--base: #D0DFDF;
+	--complement: rgb(0,175,250);
 	--baseText: #000;
 	--complementText: #000;
 	--transDark: rgba(0,0,0,.5);
 	--transLight: rgba(250,250,250,.5);
+	--transLight: rgba(250,250,250,.25);
 	--boxShadow: rgba(0,0,0,.25);
 }
 ::-webkit-scrollbar{
@@ -29,5 +30,80 @@
 	cursor: default;
 }
 html{
+	background-color: var(--base);
 	overflow: hidden;
+}
+#root{
+	max-width: 100%;
+	min-height: 100vh;
+	max-height: 100vh;
+}
+#Loading-box{
+	width: 70px;
+	height: 70px;
+	position: fixed;
+	top: calc(50% - 35px);
+	left: calc(50% - 35px);
+}
+.ctrl-lbox{
+	width: 70px;
+	height: 70px;
+	border-width: 4px;
+	border-style: solid;
+	border-color: transparent;
+	border-radius: 50%;
+	position: relative;
+	transform: rotate(-45deg);
+}
+.loading-circle{
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 50%;
+	opacity: .5;
+	position: absolute;
+}
+.circle-1{
+	width: 	80px;
+	height: 80px;
+	border-color: var(--complement) transparent;
+	top: calc(50% - 40px);
+	left: calc(50% - 40px);
+}
+.circle-2{
+	width: 	52px;
+	height: 52px;
+	border-color: var(--complement) transparent var(--complement) var(--complement);
+	top: calc(50% - 26px);
+	left: calc(50% - 26px);
+}
+.circle-3{
+	width: 	44px;
+	height: 44px;
+	border-color: var(--complement) transparent transparent;
+	top: calc(50% - 22px);
+	left: calc(50% - 22px);
+}
+.padding-bground,
+.sub-pb,
+.svg-blank-bground{
+	width: 100%;
+	height: 75px;
+}
+.padding-bground{
+	position: fixed;
+}
+.sub-pb{
+	position: relative;
+}
+.blank-up{
+	top: 0;
+}
+.blank-down{
+	bottom: 0;
+}
+.triangle-bground:nth-child(odd){
+	fill: var(--complement);
+}
+.triangle-bground:nth-child(even){
+	fill: var(--transLight);
 }
