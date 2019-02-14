@@ -293,6 +293,13 @@ time{
 	color: var(--transLight);
 	cursor: pointer;
 }
+.datalink-references{
+	color: var(--base);
+	cursor: pointer;
+}
+.datalink-references:hover{
+	color: var(--complementTextPlus)
+}
 @media all and (max-width: 1280px){
 	#section{
 		max-width: 75%;
